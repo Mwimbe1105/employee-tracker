@@ -1,18 +1,50 @@
-console.log ("hello");
 const inquirer = require("inquirer")
 
-function start(){
-    console.log ("hello change");
-    inquirer.prompt([
+async function start() {
+    var answers = await inquirer.prompt([
         {
-            type: "input",
-            message:"working",
-            name:"questions"
-        }
-    ])
-}
+            type: "list",
+            message: "what would you like to do",
+            name: "asdf",
+            choices: [
+                "view all departments",
+                "view all roles",
+                "view all employees",
 
+            ]
+        },
+        // {
+        //     type: "input",
+        //     message:"testing",
+        //     name:"answers"
+        // },
+
+    ])
+    console.log(answers.asdf)
+    if (answers.asdf == "view all departments"){
+        console.log("dfasdf")
+    }
+}
+function viewDepartments(){
+    console.log("viewingDepartments")
+}
 start()
+// var rufus= {
+//     name: "rufus",
+//     size: 6,
+//     isMale: true,
+//     favoriteFoods: [
+//         "kibble",
+//         "canFodd",
+
+//     ],
+//     Color:{
+//         head: "brown",
+//         body: "white",
+//         tail: "black",
+//     }
+// }
+// rufus.Color.body
 // GIVEN a command-line application that accepts user input
 // WHEN I start the application
 // THEN I am presented with the following options: view all departments, view all roles, view all employees, add a department, add a role, add an employee, and update an employee role
