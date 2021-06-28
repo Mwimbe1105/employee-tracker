@@ -1,12 +1,11 @@
-var mysql = require("mysql");
-var inquirer = require("inquirer");
-var console_table = require("console.table");
-
-var connection = mysql.createConnection({
+const mysql = require("mysql");
+const inquirer = require("inquirer");
+const console_table = require("console.table");
+const connection = mysql.createConnection({
     host: "localhost",
-    port: 3000,
+    port: 3306,
     user: "root",
-    password: "yourRootPassword",
+    password: "password",
     database: "employee_trackerDB"
 });
 
