@@ -1,42 +1,29 @@
-USE employee_trackerDB;
+INSERT INTO departments (name)
+    VALUES
+        ('Sales'),
+        ('Engineering'),
+        ('Finance'),
+        ('Legal');
 
--- populate departments in table 'department'
-INSERT INTO department (name)
-VALUES ("Sales");
+INSERT INTO roles (title, salary, department_id)
+    VALUES
+        ('Sales Lead', 120000, 1),
+        ('Salesperson', 80000, 1),
+        ('Lead Engineer', 140000, 2),
+        ('Software Engineer', 120000, 2),
+        ('Accountant', 130000, 3),
+        ('Legal Team Lead', 225000, 4),
+        ('Lawyer', 200000, 4);
 
-INSERT INTO department (name)
-VALUES ("Engineering");
-
-INSERT INTO department (name)
-VALUES ("Finance");
-
-INSERT INTO department (name)
-VALUES ("Legal");
-
--- populate roles in table 'role'
-INSERT INTO role (title, salary, department_id)
-VALUES ("Sales Lead", 80000, 4);
-
-INSERT INTO role (title, salary, department_id)
-VALUES ("Lead Engineer", 85000, 1);
-
-INSERT INTO role (title, salary, department_id)
-VALUES ("Lawyer", 90000, 3);
-
-INSERT INTO role (title, salary, department_id)
-VALUES ("Accountant", 70000, 2);
-
-INSERT INTO role (title, salary, department_id)
-VALUES ("Engineer", 60000, 1);
-
-INSERT INTO role (title, salary, department_id)
-VALUES ("Salesperson", 60000, 3);
-
-INSERT INTO role (title, salary, department_id)
-VALUES ("Legal Team Lead", 65000, 3);
-
-
-
--- populate employees in table 'employee'
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Ben", "Simmons", 1, NULL);
+INSERT INTO employees (first_name, last_name, role_id, manager_id)
+    VALUES
+        ('LeeRoy', 'Jenkins', 1, NULL),
+        ('Dr Lupo', 'Twitch', 2, 1),
+        ('Luka', 'TheDON', 2, 1),
+        ('Charles', 'Barkley', 3, NULL),
+        ('Scarlet', 'Johansen', 4, 4),
+        ('Dora', 'TheExplorer', 4, 4),
+        ('Mike', 'Bibby', 4, 4),
+        ('Mark', 'Wallburgh', 5, NULL),
+        ('Oscar', 'Delahoya', 6, NULL),
+        ('Dwayne', 'Johnson', 7, 9);
