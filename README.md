@@ -7,6 +7,9 @@ To install the application,
 Step 1(clone the repository. Step 2(install inquirer &console.table, also have mysql CLI. Then type NPM start.
 
 ## Video Demonstration 
+YouTube link in case my embedded doesnt work.
+https://youtu.be/EtZnf9ju7XU
+
 
 <iframe src="https://drive.google.com/file/d/1ZVmGKjo6eFZ-Q6OAQ-pOKL8aNThz-u7d/preview" width="640" height="480"></iframe>
 
